@@ -7,6 +7,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://img.freepik.com/free-photo/feedback-word-written-with-chalk-blackboard_144627-24508.jpg?w=1060&t=st=1682610839~exp=1682611439~hmac=bae02cb21f32f367f298c75eaba17a3d0e424b1322ff797268e7c6884366c0a6');
+  background-size: cover;
+ 
+  
 }
 
 code {
