@@ -1,7 +1,7 @@
 import css from './FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div className={css.thumb}>
       {options.map(option => (
@@ -23,3 +23,5 @@ FeedbackOptions.propTypes = {
   options: PropTypes.array,
   onLeaveFeedback: PropTypes.func,
 };
+
+export default FeedbackOptions;

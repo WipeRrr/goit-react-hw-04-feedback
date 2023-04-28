@@ -1,5 +1,7 @@
-import { Statistics } from './Statistics/Statistics';
-import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
+import Statistics from './Statistics';
+import FeedbackOptions from './FeedbackOptions';
+import Section from './Section';
+import Notification from './Notification';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -53,19 +55,25 @@ export class App extends Component {
           flexDirection: 'column',
         }}
       >
+        <Section title="Please leave feedback"></Section>
         <FeedbackOptions
           options={stateNames}
           onLeaveFeedback={this.handleOnBtnClick}
         ></FeedbackOptions>
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={this.countTotalFeedback()}
-          positivePercentage={this.countPositiveFeedbackPercentage()}
-        ></Statistics>
+        {good > 0 || bad > 0 || neutral > 0 ? (
+          <Section title="Statistics">
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            ></Statistics>
+          </Section>
+        ) : (
+          <Notification message="There is no feedback"></Notification>
+        )}
       </div>
     );
   }
 }
-
