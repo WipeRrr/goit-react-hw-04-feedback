@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
           className={css.btn}
           type="button"
           name={option}
-          onClick={() => onLeaveFeedback(option)}
+          onClick={onLeaveFeedback}
         >
           {option}
         </button>
