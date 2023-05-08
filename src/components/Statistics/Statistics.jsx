@@ -38,3 +38,6 @@ Statistics.propTypes = {
 };
 
 export default Statistics
+
+
+// test init
